@@ -1,4 +1,4 @@
-=simple_form_for @post do |f|
+= simple_form_for @post do |f|
   - if @post.errors.any?
     #error_explanation
       %h2= "#{pluralize(@post.errors.count, "error")} prohibited this post from being saved:"
@@ -6,7 +6,8 @@
         - @post.errors.full_messages.each do |msg|
           %li= msg
   .actions
-    =f.input :title
-    =f.input :link
-    =f.input :content
-    =f.button :submit, class: 'btn btn-primary'
+    = f.input :title
+    = f.input :link
+    = f.input :content
+    = f.input :tag_tokens, label: 'Tags', input_html: { data: { pre: @post.tagged_users.to_json } }
+    = f.button :submit, class: 'btn btn-primary'

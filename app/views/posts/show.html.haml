@@ -2,6 +2,7 @@
   %p.alert= notice
 
 %h2= @post.title
+= "Tagged: #{@post.tagged_users.map(&:email).join(", ")}"
 = link_to @post.link, @post.link, target: "_blank"
 %p= @post.content
 

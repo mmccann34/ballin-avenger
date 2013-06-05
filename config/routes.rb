@@ -1,6 +1,7 @@
 Blogapp::Application.routes.draw do
   devise_for :users
   get '/profile' => "users#show"
+  get '/users' => "users#index"
   resources :posts
   
   # The priority is based upon order of creation:
