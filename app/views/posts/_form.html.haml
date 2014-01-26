@@ -9,5 +9,5 @@
     = f.input :title
     = f.input :link
     = f.input :content
-    = f.input :tag_tokens, label: 'Tags', input_html: { data: { pre: @post.tagged_users.to_json } }
+    = f.input :tag_tokens, label: 'Tags', input_html: { data: { pre: @post.tagged_users.to_json, url: "/users/#{current_user.id}/friends.json" } }
     = f.button :submit, class: 'btn btn-primary'

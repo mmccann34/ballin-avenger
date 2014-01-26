@@ -1,5 +1,5 @@
 $(function () {
-  $('#post_tag_tokens').tokenInput('/users.json', { 
+  $('#post_tag_tokens').tokenInput($('#post_tag_tokens').data('url'), { 
     crossDomain: false, 
     propertyToSearch: 'email', 
     prePopulate: $('#post_tag_tokens').data('pre'),

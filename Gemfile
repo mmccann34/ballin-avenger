@@ -12,6 +12,7 @@ gem "haml"
 gem "devise"
 gem "cancan"
 gem "awesome_print"
+gem 'amistad'
 
 # Gems used only for assets and not required
 # in production environments by default.
